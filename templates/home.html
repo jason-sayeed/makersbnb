@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #f0f0f0;
+            padding: 10px;
+            text-align: center;
+        }
+        .logo {
+            font-size: 50px; /* Adjust the size as needed */
+            vertical-align: middle;
+        }
+        .title {
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 10px; /* Adjust as needed */
+        }
+        .user-info {
+            float: right;
+            margin-right: 20px; /* Adjust as needed */
+            margin-top: 20px; /* Adjust as needed */
+        }
+        .navigation {
+            text-align: center;
+            font-size: 20 px;
+            margin-top: 10px; /* Adjust as needed */
+        }
+        .main {
+            border-top: 1px solid #f73535;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+        .form-box {
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            width: 40%;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input {
+            width: calc(100% - 22px);
+            padding: 10px;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            box-sizing: border-box;
+        }
+        .form-group input[type="submit"] {
+            background-color: #0f415b6e;
+            color: #fff;
+            cursor: pointer;
+        }
+        hr {
+            margin-top: 30px;
+            margin-bottom: 30px;
+            border: none;
+            border-top: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <span class="logo">&#x1F3D8;&#xFE0F;</span>
+        <h1 class="title">Welcome to MakersBnB</h1>
+        
+    </div>
+
+    <hr>
+    <div class="main">
+        <div class="form-box">
+            <h2>Login</h2>
+            <form action="#" method="post">
+                <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Sign In">
+                </div>
+            </form>
+        </div>
+        <div class="form-box">
+            <h2>Sign Up</h2>
+            <form action="#" method="post">
+                <div class="form-group">
+                    <label for="new_username">Username:</label>
+                    <input type="text" id="new_username" name="new_username" required>
+                </div>
+                <div class="form-group">
+                    <label for="new_password">Password:</label>
+                    <input type="password" id="new_password" name="new_password" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirm_password">Confirm Password:</label>
+                    <input type="password" id="confirm_password" name="confirm_password" required>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Sign Up">
+                </div>
+            </form>
+        </div>
+    </div>
+    
+</body>
+</html>

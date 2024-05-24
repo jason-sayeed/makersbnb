@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Management</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #f0f0f0;
+            padding: 10px;
+            text-align: center;
+        }
+        .logo {
+            font-size: 48px; /* Adjust the size as needed */
+            vertical-align: middle;
+        }
+        .title {
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 10px; /* Adjust as needed */
+        }
+        .user-info {
+            float: right;
+            margin-right: 20px; /* Adjust as needed */
+            margin-top: 10px; /* Adjust as needed */
+        }
+        .navigation {
+            text-align: center;
+            margin-top: 10px; /* Adjust as needed */
+        }
+        .section-title {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        .subsection-title {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+        .subsection-link {
+            color: blue;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+        .divider {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            border: none;
+            border-top: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <span class="logo">&#x1F3D8;&#xFE0F;</span>
+        <h1 class="title">Welcome to Your Account</h1>
+        <div class="user-info">Hi, <span id="username">{{user_id.spaces}}</span> | <a href="/logout_page.html">Logout</a></div>
+    </div>
+    <div class="navigation">
+        <a href="#listings">Listings</a> | <a href="#bookings">Bookings</a>
+    </div>
+    <hr class="divider">
+    <div id="listings">
+        <h2 class="section-title">Listings</h2>
+        <div class="subsection">
+            <h3 class="subsection-title"><a href="/add_new_property.html" class="subsection-link">Add a New Property</a></h3>
+        </div>
+        <div class="subsection">
+            <h3 class="subsection-title"><a href="/property_listing-has-two-listings.html" class="subsection-link">Manage All Properties</a></h3>
+        </div>
+    </div>
+    <hr class="divider">
+    <div id="bookings">
+        <h2 class="section-title">Bookings</h2>
+        <div class="subsection">
+            <h3 class="subsection-title"><a href="/make_booking.html" class="subsection-link">Make a Booking</a></h3>
+        </div>
+        <div class="subsection">
+            <h3 class="subsection-title"><a href="/property_mgmt_actions.html" class="subsection-link">Manage All Bookings</a></h3>
+        </div>
+    </div>
+</body>
+</html>

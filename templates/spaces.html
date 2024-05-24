@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Listings</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #f0f0f0;
+            padding: 10px;
+            text-align: center;
+        }
+        .logo {
+            font-size: 48px; /* Adjust the size as needed */
+            vertical-align: middle;
+        }
+        .title {
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 10px; /* Adjust as needed */
+        }
+        .user-info {
+            float: right;
+            margin-right: 20px; /* Adjust as needed */
+            margin-top: 10px; /* Adjust as needed */
+        }
+        .navigation {
+            text-align: center;
+            margin-top: 10px; /* Adjust as needed */
+        }
+        .property-listing {
+            padding: 20px;
+            border-bottom: 1px solid #ccc;
+        }
+        .property-title {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .property-characteristics {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .property-characteristics li {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <span class="logo">&#x1F3D8;&#xFE0F;</span>
+        <h1 class="title">Welcome to Our Website</h1>
+    </div>
+    <div class="navigation">
+        <a href="#">Account</a> | <a href="#">Bookings</a>
+
+    <p><button onclick="location.href='/add_new_property'">Add new listing</button>
+    </p>
+    
+    <form action="{{ url_for('filter_spaces_by_date') }}" method="get">
+        <p>
+            <label for="fromdate">From:</label>
+            <input type="date" id="fromdate" name="fromdate" value="{{ fromdate }}" required style="margin-right: 100px;">
+            <label for="todate">To:</label>
+            <input type="date" id="todate" name="todate" value="{{ todate }}" required style="margin-right: 100px;">
+            <!-- Change the input type to submit and update the value -->
+            <input type="submit" value="Search">
+        </p>
+    </form>
+
+    </div>
+    <!-- This is the section that shows one property -->
+        <div class="property-listing">
+            {% for space in spaces %}
+            <h2 class="property-title">{{ space.name }}</h2>
+            <ul class="property-characteristics">
+                <li>Description: {{space.description}}</li>
+                <li>Price: {{space.price}}</li>
+                <li>Listed By: {{space.userid}}</li>
+                <li>Availability : from {{space.fromdate}} until {{space.todate}}</li>
+            </ul>
+            {% endfor %}
+        </div>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Property Listing</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #f0f0f0;
+            padding: 10px;
+            text-align: center;
+        }
+        .logo {
+            font-size: 48px; /* Adjust the size as needed */
+            vertical-align: middle;
+        }
+        .title {
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 10px; /* Adjust as needed */
+        }
+        .user-info {
+            float: right;
+            margin-right: 20px; /* Adjust as needed */
+            margin-top: 10px; /* Adjust as needed */
+        }
+        .navigation {
+            text-align: center;
+            margin-top: 10px; /* Adjust as needed */
+        }
+        .divider {
+            margin-top: 30px;
+            margin-bottom: 30px;
+            border: none;
+            border-top: 1px solid #ccc;
+        }
+        .property-form {
+            margin: 20px auto;
+            width: 50%;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .property-form label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        .property-form input[type="text"],
+        .property-form input[type="date"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+        .property-form input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .property-form input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <span class="logo">&#x1F3D8;&#xFE0F;</span>
+        <h1 class="title">Welcome to MakersBnB</h1>
+    </div>
+    <div class="navigation">
+        <a href="#">Account</a> | <a href="#">Bookings</a>
+    </div>
+    <hr class="divider">
+    <div class="property-form">
+        <h2>Add a new property</h2>
+        <form action="/add_listing" method="post">
+            <label for="name">Property Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="description">Description:</label>
+            <input type="text" id="description" name="description" required>
+            <label for="price">Price:</label>
+            <input type="text" id="price" name="price" required>
+            <label for="fromdate">Available From:</label>
+            <input type="date" id="fromdate" name="fromdate" required>
+            <label for="todate">Available To:</label>
+            <input type="date" id="todate" name="todate" required>
+            <input type="submit" value="Add Property">
+        </form>
+    </div>
+</body>
+</html>
