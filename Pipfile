@@ -9,7 +9,7 @@ psycopg = "*"
 flask = "*"
 pytest-playwright = "*"
 pytest-xprocess = "*"
-py = "*"
+py = "==1.11.0"
 playwright = "*"
 pandas = "*"
 
