@@ -65,4 +65,4 @@ def filter_spaces_by_date():
     return render_template('/spaces.html', space_ids=space_ids)
 
 if __name__ == '__main__':
-    app.run(debug=True, port=int(os.environ.get('PORT', 5001)))
+    app.run(debug=False, port=int(os.environ.get('PORT', 5001)))
